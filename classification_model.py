@@ -3,11 +3,6 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 import cv2 as cv
 import os
-from keras.src.layers.preprocessing.image_preprocessing.random_flip import HORIZONTAL_AND_VERTICAL
-from tensorflow.keras import Sequential, Model
-from tensorflow.keras.layers import Dense, Dropout, Input, Conv2D, MaxPool2D
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from background import removeBackgroundFolder, removeBackgroundSingle
 #########################################################################
 
 
@@ -42,7 +37,31 @@ def readImageDirect(rpath):
                 cnt+=1
             print(".",end="")
         print()
-readImageDirect(r"d:\imgs")
+
+def load_directory(rootpath):  #{label:[이미지 리스트]}
+    f_list = os.listdir(rootpath)
+    # print(f_list)
+    y_labels = []
+    x_files= []
+    data_sets = {}
+    for label,fpath in enumerate(f_list):
+        print(".", end="")
+        data_sets[label]=[]
+        f_name = r"{}\{}".format(rootpath,fpath)
+        f_imgname = os.listdir(f_name)
+        # print(f_name)
+        for p in f_imgname:
+            y_labels.append(label)
+            fimg = cv.imread(r"{}\{}".format(f_name,p))
+            fimg = cv.cvtColor(fimg,cv.COLOR_BGR2RGB)
+            fimg = cv.resize(fimg,(64,64))
+            x_files.append(fimg)
+    return f_list,np.array(y_labels),np.array(x_files)
+
+
+if __name__=="__main__":
+    readImageDirect(r"d:\imgs") # 데이터 증강 호출
+
 SEED=10
 np.random.seed(SEED)
 tf.random.set_seed(SEED)
