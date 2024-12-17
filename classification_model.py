@@ -58,6 +58,13 @@ def load_directory(rootpath):  #{label:[이미지 리스트]}
             x_files.append(fimg)
     return f_list,np.array(y_labels),np.array(x_files)
 
+def getTrainData(dpath):
+    label_list, y_data, x_data = load_directory(dpath)
+    # suffle
+    from sklearn.model_selection import train_test_split
+    x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.2, random_state=10, stratify=y_data)
+    return {"label_list":label_list,"train":(x_train,y_train),"test":(x_test,y_test)}
+
 
 if __name__=="__main__":
     readImageDirect(r"d:\imgs") # 데이터 증강 호출
