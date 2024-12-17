@@ -9,7 +9,7 @@ Crawling/Craw_image_running :: run
 Crawling/Google_Crawling_Image :: import    
 Crawling/Naver_Crawling_Image :: import 
 입력필요 : 이미지 저장경로, 검색어, 영문파일이름    
-::: 실습환경 :::
+::: 실습환경 :::  
 크롬 드라이버 필요 ()  
 win64 v131.0.6788.108  
 크롬 웹브라우저 필요  
