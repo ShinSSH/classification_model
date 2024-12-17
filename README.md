@@ -20,7 +20,7 @@ win64 v131.0.6788.108
 def removeBackgroundFolder : 디렉터리 내의 모든 이미지 백 그라운드 제거 및 이미지 (256,256) 으로 리사이징  
 def singleRemoveBackground : 단일 이미지에 대한 (256,256) 으로 리사이징
               
-=== < classification_model.py > === 
+=== < classification_model.py > ===   
 def imageAugment_sub : 이미지를 회전, 확대축소, 밝기조정 등 다양한 방법으로 이미지 증강  
 def readImageDirect : 디렉터리 내의 이미지를 읽어서 증강함수(imageAugment_sub)를 호출하고 이미지를 저정하는 함수  
 def load_directory_sub : 증강된 이미지를 읽어서 64*64로 변환 후 numpy 리스트로 변환 후 정답 리스트, y_label, x_data 리턴  
