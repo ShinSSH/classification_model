@@ -11,7 +11,7 @@ Crawling/Naver_Crawling_Image :: import
 입력 : 이미지 저장경로, 검색어, 영문파일이름    
 
 ::: 실습환경 :::  
-[ 크롬 드라이버 필요 ] (https://googlechromelabs.github.io/chrome-for-testing/) 
+[ 크롬 드라이버 필요 ] (https://googlechromelabs.github.io/chrome-for-testing/)     
 win64 v131.0.6788.108  
 [ 크롬 웹브라우저 필요 ]  
 131.0.6778.140(공식 빌드) 64bit
