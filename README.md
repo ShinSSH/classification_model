@@ -1,24 +1,28 @@
-=== < describe > ===        
-웹 크롤링을 이용하여 원하는 이미지를 수집하고 전처리 후 CNN모델을 구성하는 훈련과정
-===========================================
+======================== < describe > ========================  
+
+웹 크롤링을 이용하여 원하는 이미지를 수집하고 전처리 후 CNN모델을 구성하는 훈련과정  
+
+==========================================================  
 
 1. 크롤링 작업   
 Crawling/Craw_image_running :: run  
 Crawling/Google_Crawling_Image :: import    
 Crawling/Naver_Crawling_Image :: import 
-입력필요 : 이미지 저장경로, 검색어, 영문파일이름    
-::: 실습환경 :::
-크롬 드라이버 필요 ()
-win64 v131.0.6788.108
-크롬 웹브라우저 필요
+입력 : 이미지 저장경로, 검색어, 영문파일이름    
+
+::: 실습환경 :::  
+[ 크롬 드라이버 필요 ] (https://googlechromelabs.github.io/chrome-for-testing/) 
+win64 v131.0.6788.108  
+[ 크롬 웹브라우저 필요 ]  
 131.0.6778.140(공식 빌드) 64bit
+
 디렉터리 내의 폴더명은 정답으로 처리되며 각 관련 이미지가 내부에 존재 해야한다.
 
-=== < opencv.py > ===    
+=== < RemoveBackground.py > ===    
 def removeBackgroundFolder : 디렉터리 내의 모든 이미지 백 그라운드 제거 및 이미지 (256,256) 으로 리사이징  
 def singleRemoveBackground : 단일 이미지에 대한 (256,256) 으로 리사이징
               
-=== < classification_model.py > === 
+=== < classification_model.py > ===   
 def imageAugment_sub : 이미지를 회전, 확대축소, 밝기조정 등 다양한 방법으로 이미지 증강  
 def readImageDirect : 디렉터리 내의 이미지를 읽어서 증강함수(imageAugment_sub)를 호출하고 이미지를 저정하는 함수  
 def load_directory_sub : 증강된 이미지를 읽어서 64*64로 변환 후 numpy 리스트로 변환 후 정답 리스트, y_label, x_data 리턴  
