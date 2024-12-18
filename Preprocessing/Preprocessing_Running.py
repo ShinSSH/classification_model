@@ -4,7 +4,7 @@ from utility import readImageDirect
 
 userSel = input("배경을 제거할 대상을 선택 하세요(단일 제거는 1, 다수 제거는 2, 건너뛰기는 0을 눌러주세요\n")
 if userSel!="0":
-    if userSel=="1":     # 단일제거
+    if userSel=="1": # 단일제거
         print("::::::::::::::::::::::::::::")
         imagePathName = input("배경을 제거할 파일 경로와 파일명.확장자까지 입력해주세요\n"
               "ex) d:\\img\\abc\\myimg.jpg\n")
