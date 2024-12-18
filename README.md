@@ -20,7 +20,7 @@ win64 v131.0.6788.108
 
 === < RemoveBackground.py > ===    
 def removeBackgroundFolder : 디렉터리 내의 모든 이미지 백 그라운드 제거 및 이미지 (256,256) 으로 리사이징  
-def singleRemoveBackground : 단일 이미지에 대한 (256,256) 으로 리사이징
+def removeBackgroundSingle : 단일 이미지에 대한 (256,256) 으로 리사이징
               
 === < classification_model.py > ===   
 def imageAugment_sub : 이미지를 회전, 확대축소, 밝기조정 등 다양한 방법으로 이미지 증강  

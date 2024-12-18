@@ -9,5 +9,5 @@ if userSel==1: # 단일제거
 else:
     print("::::::::::::::::::::::::::::")
     rpath = input("배경을 제거할 디렉토리 경로를 입력해주세요\n"
-          "ex)d:\\imgs [ 경로내에 폴더명\\파일명.확장자 형태의 하위 디렉토리가 존재해야합니다 ]\n")
+          "ex)d:\\imgs [ 경로내에 (폴더명\\파일명.확장자) 형태의 하위 디렉토리가 존재해야합니다 ]\n")
     removeBackgroundFolder(r"{}".format(rpath))
