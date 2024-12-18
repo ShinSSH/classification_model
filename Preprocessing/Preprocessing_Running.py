@@ -7,7 +7,7 @@ if userSel!="0":
     if userSel=="1":     # 단일제거
         print("::::::::::::::::::::::::::::")
         imagePathName = input("배경을 제거할 파일 경로와 파일명.확장자까지 입력해주세요\n"
-              "ex) d:\\img\\myimg.jpg\n")
+              "ex) d:\\img\\abc\\myimg.jpg\n")
         removeBackgroundSingle(r"{}".format(imagePathName))
     else: # 다수 제거
         print("::::::::::::::::::::::::::::")
