@@ -15,7 +15,7 @@ def imageAugment (img): # 이미지증강
     # img = tf.image.random_flip_left_right(img)
     # img = tf.image.random_flip_up_down(img)
     RR_model = tf.keras.layers.RandomRotation(factor=(-0.2,0.3))
-    RF_model = tf.keras.layers.RandomFlip(mode=HORIZONTAL_AND_VERTICAL)
+    RF_model = tf.keras.layers.RandomFlip(mode="HORIZONTAL_AND_VERTICAL")
     RZ_model = tf.keras.layers.RandomZoom((-0.15,0.15),(-0.15,0.15))
     img = RR_model(img)
     img = RF_model(img)
