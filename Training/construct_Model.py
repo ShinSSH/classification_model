@@ -56,10 +56,10 @@ def train_fit_run(train_count,label_list,x_train,y_train,x_test,y_test):
         pickle.dump(fithist, fp)
     model.save("classification_image.keras")
     input("훈련이 종료되었습니다.\n"
-          "모델과 결과를 저장하였으며 엔터키를 누르면 손실도와 정확률을 평가합니다.\n")
+          "모델과 결과를 저장하였으며 엔터 키를 누르면 손실도와 정확률을 평가합니다.\n")
     loss, acc = model.evaluate(x_test,y_test)
     print("손실도:", loss, "정확도", "{:.2f}".format(acc*100),"%")
-    input("엔터키를 누르면 훈련 결과 손실도와 정확도 그래프를 시각화 합니다.")
+    input("엔터 키를 누르면 훈련 결과 손실도와 정확도 그래프를 시각화 합니다.")
     plt.subplot(1,2,1)
     plt.plot(fithist.history["accuracy"],label="Train Acc")
     plt.plot(fithist.history["val_accuracy"], label="Valid Acc")
@@ -71,7 +71,7 @@ def train_fit_run(train_count,label_list,x_train,y_train,x_test,y_test):
     plt.legend()
     plt.title("LOSS")
     plt.show()
-    input("시각화 창을 닫고 엔터키를 누르면 테스트 파일 예측을 시각화합니다.")
+    input("시각화 창을 닫고 엔터 키를 누르면 테스트 파일 예측을 시각화 합니다.")
     y_pred = model.predict(x_test)
     randomindex = [random.randint(0,len(x_test)) for ix in range(10)]
     for i in range(len(randomindex)):
@@ -82,7 +82,7 @@ def train_fit_run(train_count,label_list,x_train,y_train,x_test,y_test):
         plt.xticks([])
         plt.yticks([])
     plt.show()
-    input("엔터키를 누르면 혼동행렬을 작성하여 시각화 합니다.")
+    input("엔터 키를 누르면 혼동행렬을 작성하여 시각화 합니다.")
     # 혼동행렬
     y_conv_true = np.array([label_list[np.argmax(ll)] for ll in y_test])
     y_conv_pred = np.array([label_list[np.argmax(ll)] for ll in y_pred])
@@ -91,5 +91,5 @@ def train_fit_run(train_count,label_list,x_train,y_train,x_test,y_test):
     print(cm)
     heatmap(cm, cmap="Blues", annot=True, fmt=".1f", xticklabels=label_list, yticklabels=label_list)
     plt.show()
-    input("창을 닫고 엔터를 입력하시면 최종 훈련결과 리포트를 출력합니다.")
+    input("창을 닫고 엔터 키를 누르면 최종 훈련결과 리포트를 출력합니다.")
     print(classification_report(y_conv_true,y_conv_pred))

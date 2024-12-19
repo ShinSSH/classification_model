@@ -36,6 +36,17 @@ Trainning/construct_Model :: import
 
 ::: 실습환경 :::    
 Sequential,Input,Dense,Conv2D,Dropout,MaxPool2D,    
-Flatten, confusion_matrix,classfication_report,heatmap  
+Flatten, confusion_matrix,classification_report,heatmap  
+
+4.모델 실제 이미지 처리 및 샘플 확인
+SampleData_Predict/test_class :: main run
+샘플 이미지 파일을 생성한 모델로 측정
+::: 준비물 :::
+샘플용 단일 이미지
+
+※ 순서대로 실행 시 생성되는 파일 리스트 
+Training/classification_image.keras (생성된 모델)
+classification_image.history (훈련결과 손실수치)
+config (영문 라벨 리스트)
 
 ※ error 처리는 수행하지 않음 
