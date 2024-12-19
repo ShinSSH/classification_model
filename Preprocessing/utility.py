@@ -1,5 +1,5 @@
 from gc import get_count
-
+import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -81,10 +81,10 @@ def getPred_Preprocess(target_img):  #{label:[이미지 리스트]}
     target_img = target_img/255.
     return target_img
 
-def saveConfig(label_list):
-    with open(f"{ROOTPATH}\\config","wb") as fp:
+def saveConfig(label_list,rootpath):
+    print(label_list,rootpath)
+    with open(f"{rootpath}\\config","wb") as fp:
         pickle.dump(label_list, fp)
-ROOTPATH = os.path.dirname(os.path.abspath(__file__)) # 프로젝트 루트경로 페치
 
 if __name__=="__main__":
     print("Preprocessing_Running 파일을 실행하세요")

@@ -1,3 +1,4 @@
+import os
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,7 +14,10 @@ from Preprocessing.utility import saveConfig
 def train_fit_run(train_count,label_list,x_train,y_train,x_test,y_test):
     randomlist = [random.randint(0,len(x_train)) for i in range(10)]
     print(randomlist)
-    saveConfig(label_list)
+    curpath = os.path.dirname(os.path.abspath(__file__))
+    path_list = curpath.split("\\")[:-1]
+    rootpath = "\\".join(path_list)
+    saveConfig(label_list,rootpath)
     for ix,xnum in enumerate(randomlist):
         plt.subplot(2,5,ix+1)
         plt.imshow(x_train[ix])
