@@ -49,6 +49,6 @@ Training/classification_image.keras (생성된 모델)
 classification_image.history (훈련결과 손실수치)    
 config (영문 라벨 리스트)  
 
-※ 원본이미지 약 50*10 개, 증강이미지 약 50*5*10 개    
+※ 원본이미지 약 50x10 개, 증강이미지 약 50x5x10 개    
 
 ※ error 처리는 수행하지 않음     
