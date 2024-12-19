@@ -19,7 +19,7 @@ win64 v131.0.6788.108
 2.이미지 배경 제거 및 데이터 증강   
 Preprocessing/Preprocessing_Running :: main run 
 Preprocessing/Remove_Background :: import   
-Preprocessing/utility :: import 
+Preprocessing/utility :: import     
 ** 이미지 배경제거 후 회전,밝기조정 확대 기법으로 이미지 데이터 증강    
 
 ::: 실습 환경 :::   
@@ -31,7 +31,7 @@ rembg.remove
 
 3.데이터 전처리 및 훈련 실행 및 평가  
 Trainning/train_fit :: main run 
-Trainning/construct_Model :: import 
+Trainning/construct_Model :: import     
 ** 평가 훈련 실행 시 최적값으로 조기종료 콜백 적용  
 
 ::: 실습환경 :::    

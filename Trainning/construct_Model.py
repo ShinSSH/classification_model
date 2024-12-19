@@ -6,12 +6,14 @@ from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Input, Conv2D, MaxPool2D, Flatten, Activation
 from seaborn import heatmap
 from sklearn.metrics import confusion_matrix,classification_report
+from Preprocessing.utility import saveConfig
 
 
 # image confirm
 def train_fit_run(train_count,label_list,x_train,y_train,x_test,y_test):
     randomlist = [random.randint(0,len(x_train)) for i in range(10)]
-    # print(randomlist)
+    print(randomlist)
+    saveConfig(label_list)
     for ix,xnum in enumerate(randomlist):
         plt.subplot(2,5,ix+1)
         plt.imshow(x_train[ix])
