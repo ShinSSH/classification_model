@@ -63,7 +63,7 @@ def get_google(search_data,save_directory,cnt_count):
             try:
                 img_url=(re.findall(r"(.*\.jpg|.*\.JPG|.*\.jpeg|.*\.JPEG|.*\.png|.*\.PNG|.*\.webp|.*\.WEBP)",iurl)[0])
                 img_url = parse.unquote(img_url)
-                print(img_url)
+                # print(img_url)
 
                 expandfile = img_url.split(".")[-1]
                 ru = "g"+str(uuid.uuid4())

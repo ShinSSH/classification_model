@@ -1,4 +1,4 @@
-from RemoveBackground import removeBackgroundSingle,removeBackgroundFolder
+from Preprocessing.Remove_Background import removeBackgroundSingle,removeBackgroundFolder
 from selenium.webdriver.support.expected_conditions import element_selection_state_to_be
 from utility import readImageDirect
 
@@ -16,7 +16,7 @@ if userSel!="0":
         removeBackgroundFolder(r"{}".format(rpath))
 
 while(1):
-    userSel = input("이미지 증강 전처리를 수행 시 디렉토리 경로와 수량을 [,]로 구분지어 입력하세요. 취소는 0을 입력해주세요\n"
+    userSel = input("이미지 증대 전처리를 수행 시 디렉토리 경로와 수량을 [,]로 구분지어 입력하세요. 취소는 0을 입력해주세요\n"
                     "ex) d:\\img, 2\n")
 
     if userSel=="0":
