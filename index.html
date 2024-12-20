@@ -16,11 +16,11 @@
       .content{margin:0.5vw;float:left;width:14vw;height:14vw;opacity:0.9;border:1px solid gray;border-radius:5px}
       .top-cont{height:80%;padding:0.05vw;border-bottom:1px solid gray}
       .top-cont img{width:100%;height:100%}
-      .bottom-cont{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-      .bottom-cont{text-align:center;font-size:1vw;height:20%;line-height:270%;}
+      .bottom-cont{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+                   text-align:center;font-size:1vw;height:20%;line-height:270%;}
       .top-cont img:hover{position:relative;width:150%;height:120%}
-      #sub_img img{margin:2.5vw}
-      #sub_img img:hover{z-index:111;position:absolute;width:50%;height:70%;left:20vw;top:4vw}
+      #sub_img img{margin:0.5vw;width:100%;height:100%}
+      #sub_img img:hover{z-index:111;position:absolute;width:90%;height:80%;left:1.8vw;top:4vw}
       #display_closer:hover{color:red}
     </style>
     <script>
@@ -46,8 +46,8 @@
           console.log(JSON.stringify(data_sets[ix]))
           $("#sub_title").text(data_sets[ix].sub_title)
           $("#sub_content").text(data_sets[ix].sub_content)
-          let image_width = data_sets[ix].sub_img.length>5?parseInt(100/data_sets[ix].sub_img.length):19
-          let image_height = data_sets[ix].sub_img.length>5?150:300
+          let image_width = 19
+          let image_height = data_sets[ix].sub_img.length>5?20:30
           for(url of data_sets[ix].sub_img){
             $("#sub_img").append(createImageUrl(url,2000,image_width,image_height))
           }
@@ -61,7 +61,7 @@
           $("#sub_img").html("")
           $(this).css("display","none")
           $("#display").css("display","none")
-          $("#display_closer").css("display","inline")
+          $("#display_closer").css("display","none")
           })
           $("#display_closer").click(()=>{
             $("#cover").trigger("click")
@@ -99,7 +99,7 @@
       <h3 id="sub_title" style="text-align:center;margin-top:0.8vh">모델 구성</h3>
       <hr style="margin:0 10%;border:2px solid gray;margin-bottom:1vh">
       <p id="sub_content" style="text-align:center;height:3vh;color:blue">전처리 기능으로 이미지 표준화</p>
-      <p id="sub_img" style="margin-top:10vh"></p>
+      <div id="sub_img" style="margin-top:10vh"></div>
       <p id="user_fill" style="height:3vh;position:relative;position:absolute;bottom:1vh">
         의견 : min-max 표준화를 실행하기 위해 색상의 최대크기가 255인걸 감안하여 /255. 으로 나눔
       </p>
@@ -117,7 +117,8 @@
   </style>
   <script>
     function createImageUrl(thumbnail_id,w=500,width,height){
-      return `<img src ="https://drive.google.com/thumbnail?id=${thumbnail_id}&sz=w${w}" ${width?("width="+width+"%"):""} ${height?("height="+height+"vh"):""}>`
+      return `<p style="float:left;margin-left:0.3vw;${width?("width:"+width+"%;"):"width:100%;"} ${height?("height:"+height+"vh;"):"height:100%;"}">
+               <img src ="https://drive.google.com/thumbnail?id=${thumbnail_id}&sz=w${w}"}></p>`
       }
 
     function imagePlace(){
