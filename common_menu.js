@@ -7,10 +7,10 @@ class Menu{
     mtitle;url;tips;
 }
 menu0 = new Menu("심심풀이 Racing Game")
-menu0.url = "https://ShinSSH.github.io/classification_model/race.html"
+menu0.url = "https://shinssh.github.io/classification_model/race.html"
 menu0.tips = "아주 기본적이고 간단한 심심풀이 땅콩 레이싱 고고~"
 menu1 = new Menu("CNN AND Crawling");
-menu1.url="https://ShinSSH.github.io/classification_model/"
+menu1.url="https://shinssh.github.io/classification_model/"
 menu1.tips="네이버,구글 이미지 크롤링 및 컨볼루션 적용한 모델";
 menu2 = new Menu("RNN AND LSTM Encrypto Money")
 menu2.url = "https://shinssh.github.io/RNN_Encrypto/"
