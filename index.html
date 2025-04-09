@@ -1,17 +1,17 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />  <!-- 1. select encoding -->
-    <title>분류모델</title>    <!-- 2. create title -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!-- 3. select font -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!-- 4. import jquery -->
-    <script src="common_menu.js"></script> <!-- 5. load library function?? -->
+    <meta charset="utf-8" />
+    <title>분류모델</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="common_menu.js"></script>
     <script src="dataset.js"></script>
-    <style> <!-- 6. create individual style / use # for select class -->
+    <style>
       *{margin:0;padding:0}
-      #container{height:75vh;width:99vw} <!-- background size -->
-      #mainmenu:hover{cursor:pointer} <!-- menu botton -->
-      #view_menu{z-index:133;width:30vw;min-width:20rem;height:98vh;position:fixed; <!-- menu -->
+      #container{height:75vh;width:99vw}
+      #mainmenu:hover{cursor:pointer}
+      #view_menu{z-index:133;width:30vw;min-width:20rem;height:98vh;position:fixed;
       left:-29.9vw;top:0.5vw;border:2px solid gray;border-style:ridge;
       box-shadow:2px 2px 2px 2px black;border-top-right-radius:2vw;
       border-bottom-right-radius:2vw;text-align:center;font-size:1.2vw}
@@ -33,7 +33,7 @@
       a{color:blue;text-decoration:none}
       #ttips{padding-left:1vw;font-size:1vw;color:DarkMagenta;position:absolute;bottom:3vw}
     </style>
-    <script>　<!-- Use JaveScript $()= Use jquery-->
+    <script>
       $(()=>{
         for (let i=0;i<menu_sets.length;i++){
           let ele = $(`<p style="margin-top:2.5vw" ix=${i}><a class='menus' href="${menu_sets[i].url}"> ${menu_sets[i].mtitle} </a></p>`)
